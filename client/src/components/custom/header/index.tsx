@@ -47,6 +47,8 @@ export async function Header() {
   const data = await loader();
   const { logoText, navItems, cta } = data;
 
+  console.log(data);
+
   return (
     <header className="flex items-center justify-between gap-10 py-4 container">
       <Link href={logoText.href} className="flex items-center gap-3">
@@ -61,7 +63,7 @@ export async function Header() {
           />
         </svg>
         <span className="text-sm md:text-lg lg:text-xl font-heading font-bold">
-          {logoText.text}
+          {logoText.label}
         </span>
       </Link>
       <div className="flex items-center gap-10">
